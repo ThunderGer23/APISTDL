@@ -6,7 +6,7 @@ import smtplib
 dni = APIRouter()
 
 @dni.get('/dates')
-def get_dates(DNI: str):
+def get_info(DNI: str):
     
     return "Lista la ruta :v"
 
