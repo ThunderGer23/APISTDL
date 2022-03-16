@@ -12,6 +12,7 @@ def get_info(DNI: str):
 
 @dni.get('/token')
 def get_token(email: str):
+    print(email)
     str = string.ascii_lowercase+"1234567890"
     token = ''.join(random.choice(str) for i in range(50))
 
