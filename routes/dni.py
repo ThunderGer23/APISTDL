@@ -2,13 +2,15 @@ from fastapi import APIRouter
 import random
 import string
 import smtplib
+from routes.apis_net_pe import ApisNetPe
 
 dni = APIRouter()
+peapi = ApisNetPe()
 
 @dni.get('/dates')
 def get_info(DNI: str):
-    
-    return "Lista la ruta :v"
+    person = peapi.get_person(DNI)
+    return person
 
 @dni.get('/token')
 def get_token(email: str):
