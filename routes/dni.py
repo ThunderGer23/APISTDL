@@ -21,7 +21,7 @@ def get_token(email: str):
     credentials = {"email": "proculturamx98@gmail.com",
                    "password": "2012010273.Well"}
 
-    conect = smtplib.SMTP(host='smtp.gmail.com')
+    conect = smtplib.SMTP(host='smtp.gmail.com', port=534)
     conect.ehlo()
 
     conect.starttls()
